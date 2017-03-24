@@ -8,7 +8,7 @@ class CreateJobPosts < ActiveRecord::Migration[5.0]
       t.integer :views
       t.string :company
       t.string :additional_title
-      t.text :addition_description
+      t.text :additional_description
       t.timestamps
     end
   end
