@@ -13,7 +13,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :name
+  # validates_presence_of :name
 
   has_and_belongs_to_many :job_posts
 
