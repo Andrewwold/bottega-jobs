@@ -18,4 +18,22 @@ end
 
 puts "5 job posts added."
 
+User.create!(
+  email: "test@test.com",
+  password: "asdfasdf",
+  password_confirmation: "asdfasdf",
+  name: "Admin User",
+  roles: "site_admin"
+)
+
+puts "Admin User created"
+
+User.create!(
+  email: "test2@test.com",
+  password: "asdfasdf",
+  password_confirmation: "asdfasdf",
+  name: "Regular User",
+)
+
+puts "regular user created"
 JobPost.first.skills << Skill.first
