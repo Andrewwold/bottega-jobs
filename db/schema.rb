@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20170324181806) do
     t.integer  "views"
     t.string   "company"
     t.string   "additional_title"
-    t.text     "addition_description"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.text     "additional_description"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "job_posts_skills", force: :cascade do |t|
