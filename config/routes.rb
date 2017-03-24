@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: "jobs#index"
 
   get 'jobs', to:'jobs#index'
-  get 'jobs/:id', to: 'jobs#show'
+  get 'jobs/:id', to: 'jobs#show', as: 'job'
 
   # get '*unmatched_route', to: 'jobs#show'
 end

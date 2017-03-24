@@ -1,6 +1,64 @@
-#jobs  
-  .test
-    | Hello world
+#jobs
+  .container
+    .row
+      .col-md-12.search-wrapper
+        .col-md-12.inner-search-wrapper
+          form
+            .row
+              .col-md-9
+                input.form-control.keywords-input.text-and-btn type="text" placeholder="Keywords (Job Title, Company, etc)"
+              / .col-md-3  
+              /   input.form-control.location-input.text-and-btn type="text" placeholder="Location(City, State, Zip)"
+              .col-md-3 
+                input.text-and-btn#submit-btn type="submit" value="Search"
+              .col-md-12.checkboxes
+                label.custom-control.custom-checkbox
+                  input.custom-control-input type="checkbox"
+                    span.custom-control-indicator
+                    span.custom-control-description
+                      | Apprentice
+                label.custom-control.custom-checkbox
+                  input.custom-control-input type="checkbox"
+                    span.custom-control-indicator
+                    span.custom-control-description
+                      | Internship
+                label.custom-control.custom-checkbox
+                  input.custom-control-input type="checkbox"
+                    span.custom-control-indicator
+                    span.custom-control-description
+                      | Part Time
+                label.custom-control.custom-checkbox
+                  input.custom-control-input type="checkbox"
+                    span.custom-control-indicator
+                    span.custom-control-description
+                      | Full Time
 
-div
-  = @jobs.inspect
+    .row.sorts-row
+      .col-md-10.sorts-col
+        ul.nav
+          li.nav-item
+            a.nav-link.active href="#" Sort By
+          li.nav-item
+            a.nav-link.active href="#" Distance
+          li.nav-item
+            a.nav-link.active href="#" Skills
+          li.nav-item
+            a.nav-link.active href="#" All Tracks
+      .col-md-2
+        ul.nav
+          li.nav-item
+            a.nav-link.active href="#" Filter
+      .col-md-12.job-posts-wrapper
+        .col-md-12
+          - @jobs.each do |job|
+            .row.job-post-row
+              .col-md-12.job-post
+                .col-md-4.job-title
+                  = job.title
+                .col-md-2.company
+                  = job.company
+                .col-md-2.location
+                  = job.state
+                .col-md-2.visit-site
+                  = link_to 'View', job_path(job)
+                .col-md-2.arrow
