@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170324205353) do
+ActiveRecord::Schema.define(version: 20170324221640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170324205353) do
     t.string   "api_name"
     t.string   "api_id"
     t.integer  "job_type"
+    t.string   "location"
   end
 
   create_table "job_posts_skills", force: :cascade do |t|

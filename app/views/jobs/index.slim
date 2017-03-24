@@ -3,15 +3,15 @@
     .row
       .col-md-12.search-wrapper
         .col-md-12.inner-search-wrapper
-          form
+          = form_tag jobs_path, method: :get 
             .row
-              .col-md-9
-                input.form-control.keywords-input.text-and-btn type="text" placeholder="Keywords (Job Title, Company, etc)"
+              .col-sm-9
+                = text_field_tag :query, params[:query], :placeholder => "Keywords (Job Title, Company, etc)", class: 'form-control keywords-input text-and-btn'
               / .col-md-3  
               /   input.form-control.location-input.text-and-btn type="text" placeholder="Location(City, State, Zip)"
-              .col-md-3 
-                input.text-and-btn#submit-btn type="submit" value="Search"
-              .col-md-12.checkboxes
+              .col-sm-3 
+                input.text-and-btn#submit-btn type="submit" value="Search" style="min-width: 150px"
+              /.col-md-12.checkboxes
                 label.custom-control.custom-checkbox
                   input.custom-control-input type="checkbox"
                     span.custom-control-indicator
