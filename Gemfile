@@ -37,3 +37,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.2'
 gem 'petergate'
+gem 'elasticsearch-model',
+  git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+gem 'elasticsearch-rails',
+  git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+  gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
