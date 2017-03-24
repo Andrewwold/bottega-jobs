@@ -13,8 +13,13 @@ module Api
             parsed_data = []
             raw_data["listings"]["listing"].each do |listing|
                 individual_listing = {}
-                 individual_listing[:title] = listing['title']
-                 individual_listing[:description] = listing['description']
+                individual_listing[:title] = listing['title']
+                individual_listing[:description] = listing['description']
+                individual_listing[:api_name] = "authentic_job"
+                individual_listing[:api_id] = listing['id']
+                individual_listing[:job_type] = listing['type']['name']
+                individual_listing[:company] = listing['company']['name']
+                individual_listing[:location] = "#{listing['company']['location']['city']}, #{listing['company']['location']['state']}"
                 parsed_data << individual_listing
             end
             parsed_data
