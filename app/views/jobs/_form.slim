@@ -1,0 +1,49 @@
+= form_for @job do |j|
+  div.field
+    = j.label :title 
+    br
+    = j.text_field :title
+  div.field
+    = f.label :description
+    br
+    = f.text_area :description
+  div.field
+    = f.label :city
+    br
+    = f.text_field :city
+  div.field
+    = f.label :state
+    br
+    = f.text_field :state
+  div.field
+    = f.label :views
+    br
+    = f.number_field :views
+  div.field
+    = f.label :company
+    br
+    = f.text_field :company
+  div.field
+    = f.label :additional_title
+    br
+    = f.text_field :additional_title
+  div.field
+    = f.label :additional_description
+    br
+    = f.text_area :additional_description
+  div.field
+    = f.label :api_name
+    br
+    = f.text_field :api_name
+  div.field
+    = f.label :api_id
+    br
+    = f.text_field :api_id
+  div.field
+    = f.label :job_type
+    br
+    = f.number_field :job_type
+  div.field
+    = f.label :location
+    br
+    = f.text_field :location

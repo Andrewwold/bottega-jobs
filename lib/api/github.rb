@@ -15,7 +15,7 @@ module Api
     def self.parse response
       response.each do |arr|
         j = JobPost.find_or_initialize_by(api_id: arr['id'], api_name: 'github')
-        j.update_attributes({title: arr['title'], location: arr['location'], company: arr['company']})
+        j.update_attributes({:title => arr['title'], :location => arr['location'], :company => arr['company'], :description => arr['description'], :additional_description => arr['how_to_apply'], :additional_title => "HOW TO APPLY", :job_type => arr["type"] })
       end
     end
   end
