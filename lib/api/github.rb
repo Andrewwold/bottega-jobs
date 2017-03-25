@@ -14,7 +14,7 @@ module Api
 
     def self.parse response
       response.each do |arr|
-        JobPost.new(title: arr.title, location: arr.location)
+        JobPost.create(:api_name => "Github", :api_id => arr['id'], :title => arr['title'], :location => arr['location'], :company => arr['company'], :description => arr['description'], :additional_description => arr['how_to_apply'], :additional_title => "HOW TO APPLY", :job_type => arr["type"] )
       end
     end
   end

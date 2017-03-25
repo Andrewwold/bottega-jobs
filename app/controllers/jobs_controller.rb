@@ -2,8 +2,12 @@ class JobsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
 
   def index
-    
-    @jobs = JobPost.all
+    if params[:query].blank?
+      @jobs = JobPost.all
+    else
+      JobPost.import
+      @jobs = JobPost.search( params[:query] ).records.to_a
+    end
   end
 
   def show
