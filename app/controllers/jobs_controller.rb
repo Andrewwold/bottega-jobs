@@ -2,6 +2,7 @@ class JobsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
 
   def index
+    
     @jobs = JobPost.all
   end
 
