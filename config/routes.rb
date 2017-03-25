@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get 'jobs/:id', to: 'jobs#show', as: 'job'
 
   # get '*unmatched_route', to: 'jobs#show'
+
 end
