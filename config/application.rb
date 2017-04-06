@@ -15,5 +15,12 @@ module BottegaJobs
     config.eager_load_paths << "#{Rails.root}/lib"
     # # Autoload lib/ folder including all subdirectories
     # config.autoload_paths += Dir["#{config.root}/lib/**/"]
+
+    config.active_job.queue_adapter = :delayed_job
+
+		config.after_initialize do
+			ScheduledJob.schedule!
+		end
+
   end
 end

@@ -5,6 +5,7 @@ class JobsController < ApplicationController
     if params[:query].blank?
       @jobs = JobPost.all
     else
+      
       JobPost.import
       @jobs = JobPost.search( params[:query] ).records.to_a
     end

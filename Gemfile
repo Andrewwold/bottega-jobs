@@ -18,6 +18,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'tether-rails'
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'delayed_job_active_record'
+gem 'delayed_job_recurring'
+gem "daemons"
 
 group :development, :test do
   gem 'byebug', platform: :mri
